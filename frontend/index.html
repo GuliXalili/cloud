@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static  'css/style.css' %}">
+</head>
+<body>
+    <h1 style="color:rgb(21, 37, 217); text-align:center;">PERTY</h1>
+    {% for x in part %}
+        <h3 style="color:rgb(164, 23, 211);">{{ x.title}}</h3>
+        <p style="font-family:sans-serif;">{{ x.atributs}}</p>
+        <p style="font-family: Impact;">{{ x.dateof}}</p>
+        <p style="font-family:serif">{{ x.location}}</p>
+        <img src="{{ x.img }}" alt="">
+    {% endfor %}
+</body>
+</html>
